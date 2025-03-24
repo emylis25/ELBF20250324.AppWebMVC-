@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ELBF20250324.AppWebMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ELBF20250324.AppWebMVC.Controllers
 {
+    [Authorize(Roles = "ADMINISTRADOR")]
+
     public class ProductController : Controller
     {
         private readonly Test20250324DbContext _context;
